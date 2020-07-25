@@ -95,4 +95,7 @@
     <string name="refresh_rate_tile_label">Refresh rate</string>
     <string name="auto_mode_label">Dynamic</string>
 
+    <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">DC Dimming</string>
+
 </resources>
