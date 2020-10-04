@@ -10886,6 +10886,7 @@ public final class Settings {
         public static final String LAUNCHER_TASKBAR_EDUCATION_SHOWING =
                 "launcher_taskbar_education_showing";
 
+        /**
          * Enable udfps detection even when screen is off
          * Default value is 0
          * @hide
@@ -10899,6 +10900,14 @@ public final class Settings {
          */
         @Readable
         public static final String WINDOW_IGNORE_SECURE = "window_ignore_secure";
+
+        /**
+         * Gesture navbar length mode.
+         * Supported modes: 0 for normal length, 1 for medium and 2 for long.
+         * Default 0.
+         * @hide
+         */
+        public static final String GESTURE_NAVBAR_LENGTH_MODE = "gesture_navbar_length_mode";
 
         /**
          * These entries are considered common between the personal and the managed profile,
