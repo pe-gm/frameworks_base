@@ -120,4 +120,7 @@
     <java-symbol type="bool" name="config_supportsNetworkTrafficOnStatusBar" />
 
     <java-symbol type="array" name="config_loggersPkgList" />
+
+    <!-- For dynamic default font styles -->
+    <java-symbol type="string" name="config_bodyFontFamily" />
 </resources>
