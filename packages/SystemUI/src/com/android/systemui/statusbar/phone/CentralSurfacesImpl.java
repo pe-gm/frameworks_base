@@ -160,6 +160,7 @@ import com.android.systemui.keyguard.KeyguardUnlockAnimationController;
 import com.android.systemui.keyguard.KeyguardViewMediator;
 import com.android.systemui.keyguard.ScreenLifecycle;
 import com.android.systemui.keyguard.WakefulnessLifecycle;
+import com.android.systemui.model.SysUiState;
 import com.android.systemui.navigationbar.NavigationBarController;
 import com.android.systemui.navigationbar.NavigationBarView;
 import com.android.systemui.plugins.DarkIconDispatcher;
@@ -704,6 +705,8 @@ public class CentralSurfacesImpl extends CoreStartable implements
 
     private CustomSettingsObserver mCustomSettingsObserver;
 
+    private final SysUiState mSysUiState;
+
     /**
      * Public constructor for CentralSurfaces.
      *
@@ -808,7 +811,8 @@ public class CentralSurfacesImpl extends CoreStartable implements
             DeviceStateManager deviceStateManager,
             DreamOverlayStateController dreamOverlayStateController,
             WiredChargingRippleController wiredChargingRippleController,
-            IDreamManager dreamManager) {
+            IDreamManager dreamManager,
+            SysUiState sysUiState) {
         super(context);
         mNotificationsController = notificationsController;
         mFragmentService = fragmentService;
@@ -895,6 +899,7 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mWallpaperManager = wallpaperManager;
         mJankMonitor = jankMonitor;
         mDreamOverlayStateController = dreamOverlayStateController;
+        mSysUiState = sysUiState;
 
         mLockscreenShadeTransitionController = lockscreenShadeTransitionController;
         mStartingSurfaceOptional = startingSurfaceOptional;
@@ -4081,6 +4086,17 @@ public class CentralSurfacesImpl extends CoreStartable implements
 
     protected void dismissKeyboardShortcuts() {
         KeyboardShortcuts.dismiss();
+    }
+
+    @Override
+    public void setBlockedGesturalNavigation(boolean blocked) {
+        if (getNotificationPanelViewController() != null) {
+            getNotificationPanelViewController().setBlockedGesturalNavigation(blocked);
+            getNotificationPanelViewController().updateSystemUiStateFlags();
+        }
+        if (getNavigationBarView() != null) {
+            getNavigationBarView().setBlockedGesturalNavigation(blocked, mSysUiState);
+        }
     }
 
     /**
