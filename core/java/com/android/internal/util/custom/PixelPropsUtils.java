@@ -73,7 +73,9 @@ public class PixelPropsUtils {
             "com.google.android.youtube",
             "com.google.android.apps.youtube.kids",
             "com.google.android.apps.youtube.music",
-            "com.google.android.gm"
+            "com.google.android.gm",
+	        "com.google.android.as",
+	        "com.google.android.inputmethod.latin"
     };
 
     private static final String[] packagesToKeep = {
