@@ -36,6 +36,12 @@ public class GamesPropsUtils {
             "com.madfingergames.legends"
     };
 
+    private static final Map<String, Object> propsToChangeROG3;
+    private static final String[] packagesToChangeROG3 = {
+            "com.pearlabyss.blackdesertm.gl",
+            "com.pearlabyss.blackdesertm"
+    };
+
     private static final Map<String, Object> propsToChangeXP5;
     private static final String[] packagesToChangeXP5 = {
             "com.activision.callofduty.shooter",
@@ -69,6 +75,9 @@ public class GamesPropsUtils {
         propsToChangeROG1 = new HashMap<>();
         propsToChangeROG1.put("MODEL", "ASUS_Z01QD");
         propsToChangeROG1.put("MANUFACTURER", "asus");
+        propsToChangeROG3 = new HashMap<>();
+        propsToChangeROG3.put("MODEL", "ASUS_I003D");
+        propsToChangeROG3.put("MANUFACTURER", "asus");
         propsToChangeXP5 = new HashMap<>();
         propsToChangeXP5.put("MODEL", "SO-52A");
         propsToChangeXP5.put("MANUFACTURER", "Sony");
@@ -89,6 +98,16 @@ public class GamesPropsUtils {
                 Log.d(TAG, "Defining props for: " + packageName);
             }
             for (Map.Entry<String, Object> prop : propsToChangeROG1.entrySet()) {
+                String key = prop.getKey();
+                Object value = prop.getValue();
+                setPropValue(key, value);
+            }
+        }
+        if (Arrays.asList(packagesToChangeROG3).contains(packageName)){
+            if (DEBUG){
+                Log.d(TAG, "Defining props for: " + packageName);
+            }
+            for (Map.Entry<String, Object> prop : propsToChangeROG3.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
