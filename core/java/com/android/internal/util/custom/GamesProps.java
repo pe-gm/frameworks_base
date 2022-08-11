@@ -74,7 +74,8 @@ public class GamesProps {
     private static final String[] packagesToChange11T = {
     	    "com.tencent.tmgp.sgame",
             "com.mobile.legends",
-            "com.vng.mlbbvn"
+            "com.vng.mlbbvn",
+            "com.levelinfinite.hotta.gp"
     };
 
     static {
