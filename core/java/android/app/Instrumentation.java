@@ -1247,7 +1247,7 @@ public class Instrumentation {
         app.attach(context);
         String packageName = context.getPackageName();
         GamesPropsUtils.setProps(packageName);
-        PropImitationHooks.setProps(app);
+        PropImitationHooks.setProps(context);
         return app;
     }
     
@@ -1267,7 +1267,7 @@ public class Instrumentation {
         app.attach(context);
         String packageName = context.getPackageName();
         GamesPropsUtils.setProps(packageName);
-        PropImitationHooks.setProps(app);
+        PropImitationHooks.setProps(context);
         return app;
     }
 
