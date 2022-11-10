@@ -35,4 +35,11 @@
     <string name="accessibility_quick_settings_reading_mode_changed_on">O modo de leitura foi ligado</string>
     <string name="accessibility_quick_settings_reading_mode_changed_off">O modo de leitura foi desligado</string>
     <string name="quick_settings_anti_flicker">Modo anti cintilação</string>
+    <string name="screenrecord_delete_label">Excluir</string>
+    <string name="screenrecord_delete_description">Gravação de tela excluída</string>
+    <string name="screenshot_delete_label">Excluir</string>
+    <string name="screenshot_delete_description">Excluir captura de tela</string>
+    <string name="turn_on_bluetooth">Bluetooth</string>
+    <string name="bluetooth_is_off">Bluetooth está desligado</string>
+    <string name="tap_a_device_to_connect">Toque em um dispositivo para conectar</string>
 </resources>
