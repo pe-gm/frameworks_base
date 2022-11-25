@@ -43,23 +43,36 @@ public class PixelPropsUtils {
     private static final Map<String, Object> propsToChangePixelXL;
     private static final Map<String, ArrayList<String>> propsToKeep;
 
+    // Packages to Spoof as Pixel 7 Pro
     private static final String[] packagesToChangePixel7Pro = {
-            "com.google.android.apps.wallpaper",
             "com.google.android.apps.privacy.wildlife",
-            "com.google.android.apps.subscriptions.red"
+            "com.google.android.apps.subscriptions.red",
+            "com.google.android.apps.wallpaper"
     };
 
+    // Packages to Spoof as Pixel XL
     private static final String[] packagesToChangePixelXL = {
             "com.google.android.apps.photos",
             "com.google.android.inputmethod.latin"
     };
 
+    // Packages to Spoof as Pixel 7 Pro
     private static final String[] extraPackagesToChange = {
+            "com.amazon.avod.thirdpartyclient",
             "com.android.chrome",
             "com.android.vending",
-            "com.breel.wallpapers20"
+            "com.breel.wallpapers20",
+            "com.disney.disneyplus",
+            "com.google.android.apps.googleassistant",
+            "com.google.android.apps.nbu.files",
+            "com.google.android.apps.podcasts",
+            "com.google.android.apps.tachyon",
+            "com.google.android.contacts",
+            "com.google.android.deskclock",
+            "in.startv.hotstar"
     };
 
+    // Packages to Keep with original device
     private static final String[] packagesToKeep = {
             "com.google.android.GoogleCamera",
             "com.google.android.GoogleCamera.Cameight",
@@ -73,14 +86,14 @@ public class PixelPropsUtils {
             "com.google.android.MTCL83",
             "com.google.android.UltraCVM",
             "com.google.android.apps.cameralite",
-            "com.google.android.dialer",
-            "com.google.android.euicc",
-            "com.google.ar.core",
-            "com.google.android.youtube",
+            "com.google.android.apps.recorder",
+            "com.google.android.apps.wearables.maestro.companion",
             "com.google.android.apps.youtube.kids",
             "com.google.android.apps.youtube.music",
-            "com.google.android.apps.recorder",
-            "com.google.android.apps.wearables.maestro.companion"
+            "com.google.android.dialer",
+            "com.google.android.euicc",
+            "com.google.android.youtube",
+            "com.google.ar.core"
     };
 
     // Codenames for currently supported Pixels by Google

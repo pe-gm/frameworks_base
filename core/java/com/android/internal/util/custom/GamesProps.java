@@ -29,52 +29,63 @@ public class GamesProps {
     private static final String TAG = GamesProps.class.getSimpleName();
     private static final boolean DEBUG = false;
 
+    // Packages to Spoof as ROG Phone 1
     private static final Map<String, Object> propsToChangeROG1;
     private static final String[] packagesToChangeROG1 = {
-            "com.dts.freefireth",
-            "com.dts.freefiremax",
             "com.madfingergames.legends"
     };
 
+    // Packages to Spoof as ROG Phone 3
     private static final Map<String, Object> propsToChangeROG3;
     private static final String[] packagesToChangeROG3 = {
-            "com.pearlabyss.blackdesertm.gl",
-            "com.pearlabyss.blackdesertm"
+            "com.pearlabyss.blackdesertm",
+            "com.pearlabyss.blackdesertm.gl"
     };
 
+    // Packages to Spoof as Xperia 5
     private static final Map<String, Object> propsToChangeXP5;
     private static final String[] packagesToChangeXP5 = {
             "com.activision.callofduty.shooter",
-            "com.tencent.tmgp.kr.codm",
             "com.garena.game.codm",
+            "com.tencent.tmgp.kr.codm",
             "com.vng.codmvn"
     };
 
+    // Packages to Spoof as OnePlus 8 Pro
     private static final Map<String, Object> propsToChangeOP8P;
     private static final String[] packagesToChangeOP8P = {
-            "com.tencent.ig",
+            "com.netease.lztgglobal",
             "com.pubg.imobile",
             "com.pubg.krmobile",
-            "com.vng.pubgmobile",
             "com.rekoo.pubgm",
-            "com.tencent.tmgp.pubgmhd",
             "com.riotgames.league.wildrift",
             "com.riotgames.league.wildrifttw",
             "com.riotgames.league.wildriftvn",
-            "com.netease.lztgglobal"
+            "com.tencent.ig",
+            "com.tencent.tmgp.pubgmhd",
+            "com.vng.pubgmobile"
     };
 
+    // Packages to Spoof as OnePlus 9R
     private static final Map<String, Object> propsToChangeOP9R;
     private static final String[] packagesToChangeOP9R = {
             "com.epicgames.fortnite",
             "com.epicgames.portal"
     };
 
+    // Packages to Spoof as Mi 11T
     private static final Map<String, Object> propsToChange11T;
     private static final String[] packagesToChange11T = {
     	    "com.tencent.tmgp.sgame",
             "com.mobile.legends",
             "com.vng.mlbbvn"
+    };
+
+    // Packages to Spoof as POCO F4
+    private static final Map<String, Object> propsToChangeF4;
+    private static final String[] packagesToChangeF4 = {
+            "com.dts.freefiremax",
+            "com.dts.freefireth"
     };
 
     static {
@@ -96,6 +107,9 @@ public class GamesProps {
         propsToChange11T = new HashMap<>();
         propsToChange11T.put("MODEL", "21081111RG");
         propsToChange11T.put("MANUFACTURER", "Xiaomi");
+        propsToChangeF4 = new HashMap<>();
+        propsToChangeF4.put("MODEL", "22021211RG");
+        propsToChangeF4.put("MANUFACTURER", "Xiaomi");
     }
 
     public static void setProps(String packageName) {
@@ -157,6 +171,16 @@ public class GamesProps {
                 Log.d(TAG, "Defining props for: " + packageName);
             }
             for (Map.Entry<String, Object> prop : propsToChange11T.entrySet()) {
+                String key = prop.getKey();
+                Object value = prop.getValue();
+                setPropValue(key, value);
+            }
+        }
+        if (Arrays.asList(packagesToChangeF4).contains(packageName)){
+            if (DEBUG){
+                Log.d(TAG, "Defining props for: " + packageName);
+            }
+            for (Map.Entry<String, Object> prop : propsToChangeF4.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
