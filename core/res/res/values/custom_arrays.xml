@@ -50,4 +50,7 @@
         <item>@string/accessibility_quick_settings_live_display_changed_night</item>
         <item>@string/accessibility_quick_settings_live_display_changed_outdoor</item>
     </string-array>
+
+    <!-- Whitelist to access log service -->
+    <string-array translatable="false" name="config_loggersPkgList" />
 </resources>
