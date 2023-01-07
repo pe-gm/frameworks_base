@@ -31,8 +31,6 @@ public class GamesPropsUtils {
 
     private static final Map<String, Object> propsToChangeROG1;
     private static final String[] packagesToChangeROG1 = {
-            "com.dts.freefireth",
-            "com.dts.freefiremax",
             "com.madfingergames.legends"
     };
 
@@ -70,6 +68,12 @@ public class GamesPropsUtils {
             "com.epicgames.portal"
     };
 
+    private static final Map<String, Object> propsToChangeF4;
+    private static final String[] packagesToChangeF4 = {
+            "com.dts.freefiremax",
+            "com.dts.freefireth"
+    };
+
     private static final Map<String, Object> propsToChange11T;
     private static final String[] packagesToChange11T = {
     	    "com.tencent.tmgp.sgame",
@@ -96,6 +100,9 @@ public class GamesPropsUtils {
         propsToChange11T = new HashMap<>();
         propsToChange11T.put("MODEL", "21081111RG");
         propsToChange11T.put("MANUFACTURER", "Xiaomi");
+        propsToChangeF4 = new HashMap<>();
+        propsToChangeF4.put("MODEL", "22021211RG");
+        propsToChangeF4.put("MANUFACTURER", "Xiaomi");
     }
 
     public static void setProps(String packageName) {
@@ -157,6 +164,16 @@ public class GamesPropsUtils {
                 Log.d(TAG, "Defining props for: " + packageName);
             }
             for (Map.Entry<String, Object> prop : propsToChange11T.entrySet()) {
+                String key = prop.getKey();
+                Object value = prop.getValue();
+                setPropValue(key, value);
+            }
+        }
+        if (Arrays.asList(packagesToChangeF4).contains(packageName)){
+            if (DEBUG){
+                Log.d(TAG, "Defining props for: " + packageName);
+            }
+            for (Map.Entry<String, Object> prop : propsToChangeF4.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
