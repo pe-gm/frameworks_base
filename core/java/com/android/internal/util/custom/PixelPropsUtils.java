@@ -37,6 +37,7 @@ public class PixelPropsUtils {
 
     private static final String SAMSUNG = "com.samsung.";
 
+    private static final Map<String, Object> propsToChangeUserdebug;
     private static final Map<String, Object> propsToChangeGeneric;
     private static final Map<String, Object> propsToChangePixel5;
     private static final Map<String, Object> propsToChangePixel7Pro;
@@ -81,6 +82,10 @@ public class PixelPropsUtils {
             "com.google.android.apps.tycho"
     };
 
+    private static final String[] packagesToChangeUserdebug = {
+            "com.google.android.apps.nexuslauncher"
+    };
+
     // Codenames for currently supported Pixels by Google
     private static final String[] pixelCodenames = {
             "cheetah",
@@ -100,6 +105,8 @@ public class PixelPropsUtils {
     static {
         propsToKeep = new HashMap<>();
         propsToKeep.put("com.google.android.settings.intelligence", new ArrayList<>(Collections.singletonList("FINGERPRINT")));
+        propsToChangeUserdebug = new HashMap<>();
+        propsToChangeUserdebug.put("TYPE", "userdebug");
         propsToChangeGeneric = new HashMap<>();
         propsToChangeGeneric.put("TYPE", "user");
         propsToChangeGeneric.put("TAGS", "release-keys");
@@ -163,6 +170,9 @@ public class PixelPropsUtils {
                     propsToChange.putAll(propsToChangePixelXL);
                 } else {
                     propsToChange.putAll(propsToChangePixel5);
+                }
+               if (Arrays.asList(packagesToChangeUserdebug).contains(packageName)) {
+                    propsToChange.putAll(propsToChangeUserdebug);
                 }
             }
 
