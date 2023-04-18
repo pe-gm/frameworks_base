@@ -36,6 +36,7 @@ public class GamesPropsUtils {
 
     private static final Map<String, Object> propsToChangeROG3;
     private static final String[] packagesToChangeROG3 = {
+    	    "com.ea.gp.fifamobile",
             "com.pearlabyss.blackdesertm.gl",
             "com.pearlabyss.blackdesertm"
     };
