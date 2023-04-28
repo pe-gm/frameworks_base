@@ -63,8 +63,8 @@ public class GamesPropsUtils {
             "com.netease.lztgglobal"
     };
 
-    private static final Map<String, Object> propsToChangeOP9R;
-    private static final String[] packagesToChangeOP9R = {
+    private static final Map<String, Object> propsToChangeOP9P;
+    private static final String[] packagesToChangeOP9P = {
             "com.epicgames.fortnite",
             "com.epicgames.portal"
     };
@@ -97,9 +97,9 @@ public class GamesPropsUtils {
         propsToChangeOP8P = new HashMap<>();
         propsToChangeOP8P.put("MODEL", "IN2020");
         propsToChangeOP8P.put("MANUFACTURER", "OnePlus");
-        propsToChangeOP9R = new HashMap<>();
-        propsToChangeOP9R.put("MODEL", "LE2101");
-        propsToChangeOP9R.put("MANUFACTURER", "OnePlus");
+        propsToChangeOP9P = new HashMap<>();
+        propsToChangeOP9P.put("MODEL", "LE2123");
+        propsToChangeOP9P.put("MANUFACTURER", "OnePlus");
         propsToChange11T = new HashMap<>();
         propsToChange11T.put("MODEL", "21081111RG");
         propsToChange11T.put("MANUFACTURER", "Xiaomi");
@@ -152,11 +152,11 @@ public class GamesPropsUtils {
                 setPropValue(key, value);
             }
         }
-        if (Arrays.asList(packagesToChangeOP9R).contains(packageName)){
+        if (Arrays.asList(packagesToChangeOP9P).contains(packageName)){
             if (DEBUG){
                 Log.d(TAG, "Defining props for: " + packageName);
             }
-            for (Map.Entry<String, Object> prop : propsToChangeOP9R.entrySet()) {
+            for (Map.Entry<String, Object> prop : propsToChangeOP9P.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
