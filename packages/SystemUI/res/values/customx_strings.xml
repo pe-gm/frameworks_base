@@ -96,17 +96,11 @@
 
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_text_1">SIM 1</string>
-    <string name="qs_data_switch_text_2">SIM 2</string>
-    <string name="qs_data_switch_changed_1">Switched data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switched data card to SIM 2.</string>
 
     <!-- Google lens screenshot notification -->
     <string name="lens">Lens</string>
 
     <!-- SoundSearch Tile -->
     <string name="quick_settings_sound_search">Sound search</string>
-    <string name="quick_settings_sound_search_no_app">Sorry, but this doesn\'t work if you don\'t have a Sound search app.</string>
+    <string name="quick_settings_sound_search_no_app">Sorry, but this doesn\'t work if you don\'t have a Sound search app.</string>)
 </resources>
