@@ -56,13 +56,14 @@ public class PixelPropsUtils {
     };
 
     private static final String[] packagesToChangePixel5 = {
+            "com.android.vending",
+            "com.google.android.gms",
             "com.google.android.as",
             "com.google.android.apps.nexuslauncher"
     };
 
     private static final String[] extraPackagesToChange = {
             "com.android.chrome",
-            "com.android.vending",
             "com.breel.wallpapers20",
             "com.microsoft.android.smsorganizer",
             "com.nothing.smartcenter"
