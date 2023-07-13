@@ -92,7 +92,8 @@ public class PixelPropsUtils {
             "com.google.android.apps.recorder",
             "com.google.android.apps.wearables.maestro.companion",
             "com.google.android.apps.tachyon",
-            "com.google.android.apps.tycho"
+            "com.google.android.apps.tycho",
+            "com.google.android.apps.miphone.aiai.AiaiApplication"
     };
 
     private static final String[] customGoogleCameraPackages = {

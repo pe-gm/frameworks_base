@@ -1167,6 +1167,12 @@ public class SettingsProvider extends ContentProvider {
         enforceWritePermission(Manifest.permission.WRITE_DEVICE_CONFIG);
         final String callingPackage = resolveCallingPackage();
 
+        try {
+            if (!callingPackage.equals("com.google.android.gms")) {
+                enforceWritePermission(Manifest.permission.WRITE_DEVICE_CONFIG);
+            }
+        } catch (SecurityException e) {}
+
         synchronized (mLock) {
             if (getSyncDisabledModeConfigLocked() != SYNC_DISABLED_MODE_NONE) {
                 return SET_ALL_RESULT_DISABLED;
