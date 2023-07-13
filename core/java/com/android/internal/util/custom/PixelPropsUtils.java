@@ -85,7 +85,8 @@ public class PixelPropsUtils {
             "com.google.android.apps.tycho",
             "com.google.android.as",
             "com.google.android.gms",
-            "com.google.android.apps.restore"
+            "com.google.android.apps.restore",
+            "com.google.android.apps.miphone.aiai.AiaiApplication"
     };
 
     private static final String[] customGoogleCameraPackages = {
