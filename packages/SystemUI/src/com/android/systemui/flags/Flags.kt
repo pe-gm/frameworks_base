@@ -188,7 +188,7 @@ object Flags {
 
     /** Flag to control the revamp of keyguard biometrics progress animation */
     // TODO(b/244313043): Tracking bug
-    @JvmField val BIOMETRICS_ANIMATION_REVAMP = unreleasedFlag(221, "biometrics_animation_revamp")
+    @JvmField val BIOMETRICS_ANIMATION_REVAMP = releasedFlag(221, "biometrics_animation_revamp")
 
     // TODO(b/262780002): Tracking Bug
     @JvmField
