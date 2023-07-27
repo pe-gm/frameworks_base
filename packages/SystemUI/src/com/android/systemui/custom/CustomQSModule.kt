@@ -16,6 +16,7 @@ import com.android.systemui.qs.tiles.ReadingModeTile
 import com.android.systemui.qs.tiles.AntiFlickerTile
 import com.android.systemui.qs.tiles.SoundSearchTile
 import com.android.systemui.qs.tiles.DataSwitchTile
+import com.android.systemui.qs.tiles.AODTile
 
 import dagger.Binds
 import dagger.Module
@@ -113,4 +114,10 @@ interface CustomQSModule {
     @IntoMap
     @StringKey(DataSwitchTile.TILE_SPEC)
     fun bindDataSwitchTile(dataSwitchTile: DataSwitchTile): QSTileImpl<*>
+
+    /** Inject AODTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(AODTile.TILE_SPEC)
+    fun bindAODTile(aodTile: AODTile): QSTileImpl<*>
 }
