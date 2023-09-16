@@ -109,10 +109,12 @@
         android:title="@string/battery" />
 
     <com.android.systemui.tuner.StatusBarSwitch
+        android:icon="@drawable/ic_statusbar_roaming"
         android:key="roaming"
         android:title="@string/status_bar_roaming" />
 
     <com.android.systemui.tuner.StatusBarSwitch
+        android:icon="@drawable/ic_statusbar_vpn"
         android:key="vpn"
         android:title="@string/status_bar_vpn" />
 
@@ -122,6 +124,7 @@
         android:title="@string/status_bar_alarm" />
 
     <com.android.systemui.tuner.StatusBarSwitch
+        android:icon="@drawable/ic_statusbar_data_saver"
         android:key="data_saver"
         android:title="@string/status_bar_data_saver" />
 
